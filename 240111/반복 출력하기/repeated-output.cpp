@@ -10,6 +10,6 @@ int main() {
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
-		cout << 12345^&*()_ << endl;
+		cout << "12345^&*()_" << endl;
 	}
 }
