@@ -5,12 +5,14 @@
 using namespace std;
 
 int main() {
-	cout.fixed;
-	cin.precision(1);
-	float a, b;
+	double a, b;
 	cin >> a >> b;
 	a += b;
 	cout << a << " ";
+	cout.fixed;
+	cout.precision(2);
+	a/= 2;
 	a = round(a * 10);
-	cout << a / 20;
+	a /= 10;
+	cout << a;
 }
