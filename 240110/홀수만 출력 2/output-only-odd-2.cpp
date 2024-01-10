@@ -10,6 +10,6 @@ int main() {
 	cin >> a >> b;
 	if (a % 2 == 0)
 		a--;
-	for (int j = a; j <= b; j -=2)
+	for (int j = a; j >= b; j -=2)
 		cout << j << " ";
 }
