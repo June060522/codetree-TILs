@@ -22,7 +22,7 @@ int main() {
 			cout << s[(i / 2) + 1] << endl;
 	}
 
-	for (int i = n - 1; i > 0; i--)
+	for (int i = n - 1; i >= 0; i--)
 	{
 		if (i % 2 == 0)
 			cout << s[n - (i / 2)] << endl;
