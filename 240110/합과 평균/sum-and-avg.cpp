@@ -12,7 +12,5 @@ int main() {
 	cout.fixed;
 	cout.precision(2);
 	a/= 2;
-	a = round(a * 10);
-	a /= 10;
 	cout << a;
 }
