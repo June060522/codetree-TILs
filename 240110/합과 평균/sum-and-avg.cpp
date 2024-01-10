@@ -5,12 +5,9 @@
 using namespace std;
 
 int main() {
-	double a, b;
+	cout << fixed;
+	cout.precision(1);
+	int a, b;
 	cin >> a >> b;
-	a += b;
-	cout << a << " ";
-	cout.fixed;
-	cout.precision(2);
-	a/= 2;
-	cout << a;
+	cout << a + b << " " << (double)(a + b) / 2;
 }
