@@ -15,5 +15,5 @@ int main() {
 	if (a > b)
 		swap(a, b);
 
-	cout << a;
+	cout << b;
 }
