@@ -12,7 +12,7 @@ bool check(int num)
 
 	while (num > 0)
 	{
-		if ((num % 10) % 3 == 0)
+		if ((num % 10) % 3 == 0 && (num % 10) != 0)
 			return true;
 		num /= 10;
 	}
