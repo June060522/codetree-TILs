@@ -23,6 +23,10 @@ int main()
 		day += d1;
 		day += arr[m] - d;
 	}
+	else
+	{
+		day += d1 - d;
+	}
 
 	int answer = day / 7;
 	int temp = day % 7;
