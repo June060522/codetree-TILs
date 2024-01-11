@@ -27,7 +27,7 @@ int main()
 		else
 		{
 			answer = max(temp, answer);
-			temp = 1;
+			temp = 0;
 		}
 	}
 	answer = max(answer, temp);
