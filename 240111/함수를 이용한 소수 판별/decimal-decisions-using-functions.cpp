@@ -7,7 +7,7 @@ using namespace std;
 
 bool arr[101];
 int main() {
-	arr[1] = false;
+	fill(arr, arr + 100, false);
 	for (int i = 2; i < 50; i++)
 	{
 		for (int j = i * 2; j <= 100; j += i)
