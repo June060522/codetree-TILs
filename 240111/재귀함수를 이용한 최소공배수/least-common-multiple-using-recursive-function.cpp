@@ -7,14 +7,8 @@ using namespace std;
 
 int Fun(int a, int b)
 {
-	int c;
-	while (b != 0)
-	{
-		c = a % b;
-		a = b;
-		b = c;
-	}
-	return a;
+	if (b == 0) return a;
+    else return Fun(b, a % b);
 }
 
 int Fun1(int a, int b)
