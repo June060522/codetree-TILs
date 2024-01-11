@@ -48,8 +48,8 @@ int main()
 				if (x >= 4)
 				{
 					totalcnt++;
-					maxcnt = max(x, maxcnt);
 				}
+					maxcnt = max(x, maxcnt);
 			}
 		}
 	}
