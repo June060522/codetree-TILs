@@ -18,8 +18,11 @@ int main()
 	{
 		day += arr[i];
 	}
-	day += d1;
-	day += arr[m] - d;
+	if (m != m1)
+	{
+		day += d1;
+		day += arr[m] - d;
+	}
 
 	int answer = day / 7;
 	int temp = day % 7;
