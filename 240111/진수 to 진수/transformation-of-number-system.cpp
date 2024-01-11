@@ -24,14 +24,13 @@ int main()
 		index++;
 	}
 
-	int answer = 0;
-	int index2 = 10000;
-	while (index-- > 0)
-	{
-		answer *= 10;
-		int c = pow(b, index);
-		answer += num / c;
-		num %= c;
+	string result = "";
+
+	while (num > 0) {
+		int remainder = num % b;
+		result = to_string(remainder) + result;
+		num /= b;
 	}
-	cout << answer;
+
+	cout << result;
 }
