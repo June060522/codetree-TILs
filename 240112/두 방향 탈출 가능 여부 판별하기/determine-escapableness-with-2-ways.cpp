@@ -22,9 +22,7 @@ void DFS(int x, int y)
 
 	graph[x][y] = -1;
 	DFS(x + 1, y);
-	DFS(x - 1, y);
 	DFS(x , y + 1);
-	DFS(x , y - 1);
 }
 
 int main()
