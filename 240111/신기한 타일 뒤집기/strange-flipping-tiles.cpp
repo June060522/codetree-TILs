@@ -14,11 +14,13 @@ int main()
 	int black = 0, white = 0;
 	int num;
 	char dir;
-
+	char lastdir = ' ';
 	cin >> testcase;
 	for (int i = 0; i < testcase; i++)
 	{
 		cin >> num >> dir;
+		if (lastdir == dir)
+			num--;
 		if (dir == 'R')
 		{
 			black += num;
@@ -29,6 +31,7 @@ int main()
 			white += num;
 			black = max(black - num, 0);
 		}
+		lastdir = dir;
 	}
 
 	cout << white << " " << black;
