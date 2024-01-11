@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int main() 
+int main()
 {
 	int a, b, n;
 	cin >> a >> b >> n;
@@ -17,7 +17,7 @@ int main()
 	while (n > 0)
 	{
 		if (index > 0)
-			num += (n % 10 * index * a);
+			num += (n % 10 * pow(a, index));
 		else
 			num += n % 10;
 		n /= 10;
@@ -25,11 +25,13 @@ int main()
 	}
 
 	int answer = 0;
-	while (num > 0)
+	int index2 = 10000;
+	while (index-- > 0)
 	{
 		answer *= 10;
-		answer += num % b;
-		num /= b;
+		int c = pow(b, index);
+		answer += num / c;
+		num %= c;
 	}
 	cout << answer;
 }
