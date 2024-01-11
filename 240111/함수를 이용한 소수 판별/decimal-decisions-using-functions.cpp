@@ -18,6 +18,8 @@ int main() {
 	int a, b;
 	int answer = 0;
 	cin >> a >> b;
+	if(a == 1)
+	a++;
 	for (int i = a; i <= b; i++)
 	{
 		if (!arr[i])
