@@ -20,7 +20,7 @@ int main()
 		cin >> arr[i];
 	}
 
-	for (int i = 1; i < testcase; i++)
+	for (int i = 0; i < testcase; i++)
 	{
 		if (arr[i] > k)
 			temp++;
