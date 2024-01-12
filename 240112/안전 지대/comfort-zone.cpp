@@ -11,7 +11,7 @@ using namespace std;
 vector<vector<int>> graph;
 vector<vector<int>> tempgraph;
 
-int n, m,k,totalcnt = 0;
+int n, m,k = 0,totalcnt = -1;
 
 void DFS(int x,int y)
 {
