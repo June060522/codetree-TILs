@@ -10,15 +10,17 @@ using namespace std;
 
 int main()
 {
+	int n;
+	cin >> n;
 	int arr[10];
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < n; i++)
 		cin >> arr[i];
 
-	sort(arr, arr + 10);
+	sort(arr, arr + n);
 
 	int cnt = 0;
 	int index = 0;
-	while (arr[0] == arr[index])
+	while (arr[0] != arr[index])
 	{
 		cnt++;
 		index++;
