@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-	int answer = 999999;
+	int answer = 0;
 
 	int input = 0;
 	for (int i = 0; i < 10; i++)
