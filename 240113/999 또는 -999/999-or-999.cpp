@@ -10,8 +10,6 @@ using namespace std;
 
 int main()
 {
-	int n;
-	cin >> n;
 	int input;
 	int minVal = 1000;
 	int maxVal = -1000;
