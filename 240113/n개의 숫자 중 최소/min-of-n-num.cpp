@@ -20,7 +20,7 @@ int main()
 
 	int cnt = 0;
 	int index = 0;
-	while (arr[0] != arr[index])
+	while (arr[0] == arr[index])
 	{
 		cnt++;
 		index++;
