@@ -15,12 +15,12 @@ using namespace std;
 
 int main()
 {
-	unordered_map<int, int> um;
+	unordered_map<long long, long long> um;
 	int repeat = 0;
 	cin >> repeat;
 
 	string s;
-	int a, b;
+	long long a, b;
 	for (int i = 0; i < repeat; i++)
 	{
 		cin >> a >> b;
