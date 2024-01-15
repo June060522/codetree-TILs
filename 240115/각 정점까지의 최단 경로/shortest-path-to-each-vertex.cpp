@@ -23,7 +23,7 @@ int main() {
         graph[y].push_back({ x,d });
     }
     for (int i = 1; i <= n; i++)
-        dist[i] = 200000;
+        dist[i] = 200001;
     dist[k] = 0;
     pq.push({ 0,k });
     int min_index = 0;
@@ -48,6 +48,8 @@ int main() {
     }
 
     for (int i = 1; i <= n; i++) {
+        if (dist[i] == 200001)
+            dist[i] = -1;
         cout << dist[i] << endl;
     }
 }
