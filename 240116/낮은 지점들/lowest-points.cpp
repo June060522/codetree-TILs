@@ -31,7 +31,7 @@ int main()
 			um[a] = min(um[a], b);
 		}
 	}
-	int answer = 0;
+	long long answer = 0;
 	for (auto i : um)
 	{
 		answer += i.second;
