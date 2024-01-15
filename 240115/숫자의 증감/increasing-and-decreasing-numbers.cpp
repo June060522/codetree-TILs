@@ -26,7 +26,7 @@ int main()
 		}
 	}
 	else
-		for (int j = i; j >= 1; j++)
+		for (int j = i; j >= 1; j--)
 		{
 			cout << j << " ";
 		}
