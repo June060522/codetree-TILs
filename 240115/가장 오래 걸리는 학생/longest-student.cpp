@@ -5,7 +5,7 @@
 using namespace std;
 
 int n, m;
-map<pair<int,int>,int> graph;
+vector<pair<int,int>> graph[100001];
 bool visited[100001];
 int dist[100001];
 int main() {
@@ -15,26 +15,29 @@ int main() {
     {
         int x, y, d;
         cin >> x >> y >> d;
-        graph.insert({{y,x},d});
-        graph.insert({{x,y},d});
+        graph[x].push_back({ y,d });
+        graph[y].push_back({ x,d });
     }
     for (int i = 1; i <= n; i++)
         dist[i] = 1000000000;
     dist[n] = 0;
 
-    for (int i = 1; i <= n; i++) {
+    for (int j = 0; j < n; j++)
+    {
         int min_index = -1;
-        for (int j = 1; j <= n; j++) {
-            if (visited[j]) continue;
-            if (min_index == -1 || dist[min_index] > dist[j])
-                min_index = j;
-        }
+        for (int i = 1; i <= n; i++)
+            if (min_index == -1 || dist[min_index] > dist[i])
+                if(!visited[i])
+                    min_index = i;
         visited[min_index] = true;
-
-        for (int j = 1; j <= n; j++) {
-            if (graph[{min_index, j}] == 0) continue;
-            dist[j] = min(dist[j], dist[min_index] + graph[{min_index, j}]);
+        for (int i = 0; i < graph[min_index].size(); i++)
+        {
+            if (visited[graph[min_index][i].first]) continue;
+            dist[graph[min_index][i].first] = 
+                min(dist[graph[min_index][i].first], graph[min_index][i].second + dist[min_index]);
         }
+
+
     }
 
     for (int i = 1; i <= n; i++) {
