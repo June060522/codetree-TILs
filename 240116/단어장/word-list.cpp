@@ -26,5 +26,5 @@ int main()
 		um[s]++;
 	}
 	for (auto i : um)
-		cout << i.first << " : " << i.second << endl;
+		cout << i.first << " " << i.second << endl;
 }
