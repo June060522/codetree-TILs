@@ -4,9 +4,9 @@
 using namespace std;
 
 int n, m;
-int graph[101][101];
-bool visited[101];
-int dist[101];
+int graph[1001][1001];
+bool visited[1001];
+int dist[1001];
 int main() {
     int answer = 0;
     cin >> n >> m;
