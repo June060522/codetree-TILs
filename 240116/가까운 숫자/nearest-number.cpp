@@ -31,7 +31,7 @@ int main()
 		cin >> input;
 		if (s.upper_bound(input) != s.end())
 		{
-			mindist = min(mindist, *s.upper_bound(input) - input);
+			mindist = min(mindist, abs(*s.upper_bound(input) - input));
 		}
 
 		if (s1.upper_bound(-input) != s.end())
