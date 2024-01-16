@@ -24,11 +24,10 @@ int main()
 		cin >> input;
 		um[input]++;
 	}
-	int answer = 0;
-	int temp = 0;
+	long long answer = 0;
 	for (auto i : um)
 	{
-		int a = m - i.first;
+		long long a = m - i.first;
 		if (a == i.first)
 		{
 			for (int i = 1; i < um[a]; i++)
