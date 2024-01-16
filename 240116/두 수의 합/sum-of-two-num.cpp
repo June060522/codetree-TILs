@@ -16,29 +16,29 @@ using namespace std;
 int main()
 {
 	unordered_map<long long, long long> um;
-	long long n, m;
-	long long input;
+	long long n, m, input;
 	cin >> n >> m;
 	for (long long i = 0; i < n; i++)
 	{
 		cin >> input;
 		um[input]++;
 	}
+
 	long long answer = 0;
 	for (auto i : um)
 	{
 		long long a = m - i.first;
 		if (a == i.first)
 		{
-			for (long long i = 1; i < um[a]; i++)
-				answer += i;
+			for (long long j = 1; j < um[a]; j++)
+				answer += j;
 		}
 		else
 		{
 			answer += um[a] * um[i.first];
-			um[a] = 0;
-			um[i.first] = 0;
 		}
+		um[a] = 0;
+		um[i.first] = 0;
 	}
 	cout << answer;
 }
