@@ -35,7 +35,8 @@ int main()
 		}
 		else
 		{
-			answer += um[a] * um[i.first];
+			if(um.find(a) != um.end())
+				answer += um[a] * um[i.first];
 		}
 		um[a] = 0;
 		um[i.first] = 0;
