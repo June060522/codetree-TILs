@@ -23,7 +23,7 @@ int main()
 		cin >> input;
 		pq.push(input);
 		if (pq.size() <= 2)
-			cout << -1 << endl;
+			cout << -1 << '\n';
 		else
 		{
 			long long answer = 1;
@@ -33,7 +33,7 @@ int main()
 				answer *= tempPQ.top();
 				tempPQ.pop();
 			}
-			cout << answer << endl;
+			cout << answer << '\n';
 		}
 	}
 }
