@@ -31,12 +31,12 @@ int main()
 		cin >> input;
 		if (s.upper_bound(input) != s.end())
 		{
-			mindist = min(mindist, abs(*s.upper_bound(input) - input));
+			mindist = min(mindist, abs(abs(*s.upper_bound(input)) - abs(input)));
 		}
 
 		if (s1.upper_bound(-input) != s.end())
 		{
-			mindist = min(mindist, abs(*s1.upper_bound(-input) - input));
+			mindist = min(mindist, abs(abs(*s1.upper_bound(-input)) - abs(input)));
 		}
 
 		s.insert(input);
