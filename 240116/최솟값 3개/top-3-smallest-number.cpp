@@ -15,9 +15,9 @@ using namespace std;
 
 int main()
 {
-	priority_queue<int, vector<int>, greater<int>> pq;
-	int n, input;
-	int a = 100000, b = 100000;
+	priority_queue<long long, vector<long long>, greater<long long>> pq;
+	long long n, input;
+	long long a = 100000, b = 100000;
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
