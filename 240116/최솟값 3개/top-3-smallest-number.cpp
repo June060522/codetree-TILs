@@ -22,7 +22,6 @@ int main()
 	for (int i = 0; i < n; i++)
 	{
 		cin >> input;
-		int temp = input;
 		if (input < a)
 		{
 			swap(a, input);
@@ -31,14 +30,13 @@ int main()
 		{
 			swap(b, input);
 		}
-		if (i >= 2)
-			pq.push(input);
 		if (i < 2)
 		{
 			cout << -1 << '\n';
 		}
 		else
 		{
+			pq.push(input);
 			cout << a * b * pq.top() << '\n';
 		}
 	}
