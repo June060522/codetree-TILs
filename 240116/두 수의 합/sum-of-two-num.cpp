@@ -15,7 +15,6 @@ using namespace std;
 
 int main()
 {
-	vector<long long> v;
 	unordered_map<long long, long long> um;
 	int n, m;
 	long long input;
@@ -23,16 +22,24 @@ int main()
 	for (int i = 0; i < n; i++)
 	{
 		cin >> input;
-		v.push_back(input);
+		um[input]++;
 	}
-
-	for (int i = 0; i < n; i++)
+	int answer = 0;
+	int temp = 0;
+	for (auto i : um)
 	{
-		for (int j = i + 1; j < n; j++)
+		int a = m - i.first;
+		if (a == i.first)
 		{
-			um[v[i] + v[j]]++;
+			for (int i = 1; i < um[a]; i++)
+				answer += i;
+		}
+		else
+		{
+			answer += um[a] * um[i.first];
+			um[a] = 0;
+			um[i.first] = 0;
 		}
 	}
-
-	cout << um[m];
+	cout << answer;
 }
