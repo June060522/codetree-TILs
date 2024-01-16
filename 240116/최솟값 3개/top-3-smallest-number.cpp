@@ -17,23 +17,28 @@ int main()
 {
 	priority_queue<int,vector<int>,greater<int>> pq;
 	int n,input;
+	int a = 100000, b = 100000;
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
 		cin >> input;
+		if (input < a)
+		{
+			swap(a, input);
+		}
+		if (input < b)
+		{
+			swap(b, input);
+		}
+
 		pq.push(input);
 		if (pq.size() <= 2)
+		{
 			cout << -1 << '\n';
+		}
 		else
 		{
-			long long answer = 1;
-			priority_queue<int, vector<int>, greater<int>> tempPQ = pq;
-			for (int i = 0; i < 3; i++)
-			{
-				answer *= tempPQ.top();
-				tempPQ.pop();
-			}
-			cout << answer << '\n';
+			cout << a * b * pq.top() << '\n';
 		}
 	}
 }
