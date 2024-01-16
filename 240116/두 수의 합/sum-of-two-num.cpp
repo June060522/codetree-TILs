@@ -16,10 +16,10 @@ using namespace std;
 int main()
 {
 	unordered_map<long long, long long> um;
-	int n, m;
+	long long n, m;
 	long long input;
 	cin >> n >> m;
-	for (int i = 0; i < n; i++)
+	for (long long i = 0; i < n; i++)
 	{
 		cin >> input;
 		um[input]++;
@@ -30,7 +30,7 @@ int main()
 		long long a = m - i.first;
 		if (a == i.first)
 		{
-			for (int i = 1; i < um[a]; i++)
+			for (long long i = 1; i < um[a]; i++)
 				answer += i;
 		}
 		else
