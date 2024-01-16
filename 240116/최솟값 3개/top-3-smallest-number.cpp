@@ -15,13 +15,14 @@ using namespace std;
 
 int main()
 {
-	priority_queue<int,vector<int>,greater<int>> pq;
-	int n,input;
+	priority_queue<int, vector<int>, greater<int>> pq;
+	int n, input;
 	int a = 100000, b = 100000;
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
 		cin >> input;
+		int temp = input;
 		if (input < a)
 		{
 			swap(a, input);
@@ -30,9 +31,9 @@ int main()
 		{
 			swap(b, input);
 		}
-
-		pq.push(input);
-		if (pq.size() <= 2)
+		if (i >= 2)
+			pq.push(input);
+		if (i < 2)
 		{
 			cout << -1 << '\n';
 		}
