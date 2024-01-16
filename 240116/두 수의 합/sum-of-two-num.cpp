@@ -35,11 +35,13 @@ int main()
 		}
 		else
 		{
-			if(um.find(a) != um.end())
+			if (um.find(a) != um.end())
+			{
 				answer += um[a] * um[i.first];
+				um[a] = 0;
+				um[i.first] = 0;
+			}
 		}
-		um[a] = 0;
-		um[i.first] = 0;
 	}
 	cout << answer;
 }
