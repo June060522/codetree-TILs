@@ -15,14 +15,16 @@ using namespace std;
 
 int main()
 {
-	int n, m, l;
+	ios::sync_with_stdio(false);
+
+	long long n, m, l;
 
 	cin >> n >> m >> l;
 
-	int cnt = 0;
-	int minCnt = 0;
-	int maxCnt = 0;
-	int low = 1, high = n, middle;
+	long long cnt = 0;
+	long long minCnt = 0;
+	long long maxCnt = 0;
+	long long low = 1, high = n, middle;
 
 	while (minCnt == 0 || maxCnt == 0)
 	{
