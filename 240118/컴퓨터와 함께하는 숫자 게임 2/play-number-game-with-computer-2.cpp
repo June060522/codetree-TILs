@@ -24,15 +24,14 @@ int main()
 	long long minCnt = INT_MAX;
 	long long maxCnt = 0;
 
-
-	for (int i = m; i <= l; i++)
+	for (int i = m; i <= l; ++i)
 	{
 		long long cnt = 0;
 		long long low = 1, high = n, middle;
 		while (low <= high)
 		{
-			cnt++;
-			middle = (low + high) / 2;
+			++cnt;
+			middle = (low + high) >> 1;
 
 			if (middle < i)
 			{
@@ -51,8 +50,5 @@ int main()
 		}
 
 	}
-
-	
-
 	cout << minCnt << " " << maxCnt;
 }
