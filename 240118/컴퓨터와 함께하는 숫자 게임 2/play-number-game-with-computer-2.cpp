@@ -42,8 +42,6 @@ long long F(long long num)
 
 int main()
 {
-	ios::sync_with_stdio(false);
-
 	cin >> n >> m >> l;
 
 	long long minCnt = (long long)10e18;
