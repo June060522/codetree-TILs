@@ -20,6 +20,6 @@ int main()
 	if (a < b)
 		swap(a, b);
 
-	for (int i = a; i <= b; i++)
+	for (int i = a; i >= b; i--)
 		cout << i << " ";
 }
