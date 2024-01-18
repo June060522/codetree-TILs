@@ -21,7 +21,7 @@ int main()
 
 	cin >> n >> m >> l;
 
-	long long minCnt = INT_MAX;
+	long long minCnt = 10e18 + 1;
 	long long maxCnt = 0;
 
 	for (int i = m; i <= l; ++i)
