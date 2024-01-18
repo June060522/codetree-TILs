@@ -47,7 +47,7 @@ int main()
 	long long minCnt = (long long)10e18;
 	long long maxCnt = 0;
 
-	for (int i = m; i <= l; ++i)
+	for (long long i = m; i <= l; ++i)
 	{
 		long long cnt = F(i);
 		minCnt = min(minCnt, cnt);
