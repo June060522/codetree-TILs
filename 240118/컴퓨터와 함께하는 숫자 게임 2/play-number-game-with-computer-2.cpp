@@ -21,42 +21,37 @@ int main()
 
 	cin >> n >> m >> l;
 
-	long long cnt = 0;
-	long long minCnt = 0;
+	long long minCnt = INT_MAX;
 	long long maxCnt = 0;
-	long long low = 1, high = n, middle;
 
-	while (minCnt == 0 || maxCnt == 0)
+
+	for (int i = m; i <= l; i++)
 	{
-		cnt++;
-		middle = (low + high) / 2;
+		long long cnt = 0;
+		long long low = 1, high = n, middle;
+		while (low <= high)
+		{
+			cnt++;
+			middle = (low + high) / 2;
 
-		if (middle < m)
-		{
-			low = middle + 1;
-		}
-		else if (middle > l)
-		{
-			high = middle - 1;
-		}
-		else
-		{
-			if(minCnt == 0)
-				minCnt = cnt;
-
-			if (abs(middle - m) < abs(middle - l))
+			if (middle < i)
 			{
 				low = middle + 1;
 			}
-			else
+			else if (middle > i)
 			{
 				high = middle - 1;
 			}
-
-			if (low > high)
-				maxCnt = cnt;
+			else
+			{
+				minCnt = min(cnt, minCnt);
+				maxCnt = max(cnt, maxCnt);
+				break;
+			}
 		}
+
 	}
+
 	
 
 	cout << minCnt << " " << maxCnt;
