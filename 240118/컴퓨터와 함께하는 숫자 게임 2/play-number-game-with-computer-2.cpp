@@ -13,11 +13,36 @@
 
 using namespace std;
 
+long long n, m, l;
+
+long long F(long long num)
+{
+	long long cnt = 0;
+	long long low = 1, high = n, middle;
+	while (low <= high)
+	{
+		++cnt;
+		middle = (low + high) >> 1;
+
+		if (middle < num)
+		{
+			low = middle + 1;
+		}
+		else if (middle > num)
+		{
+			high = middle - 1;
+		}
+		else
+		{
+			break;
+		}
+	}
+	return cnt;
+}
+
 int main()
 {
 	ios::sync_with_stdio(false);
-
-	long long n, m, l;
 
 	cin >> n >> m >> l;
 
@@ -26,28 +51,9 @@ int main()
 
 	for (int i = m; i <= l; ++i)
 	{
-		long long cnt = 0;
-		long long low = 1, high = n, middle;
-		while (low <= high)
-		{
-			++cnt;
-			middle = (low + high) >> 1;
-
-			if (middle < i)
-			{
-				low = middle + 1;
-			}
-			else if (middle > i)
-			{
-				high = middle - 1;
-			}
-			else
-			{
-				minCnt = min(cnt, minCnt);
-				maxCnt = max(cnt, maxCnt);
-				break;
-			}
-		}
+		long long cnt = F(i);
+		minCnt = min(minCnt, cnt);
+		maxCnt = max(maxCnt, cnt);
 
 	}
 	cout << minCnt << " " << maxCnt;
