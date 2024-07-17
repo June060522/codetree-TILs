@@ -17,4 +17,6 @@ int main()
 		cout << "Usually";
 	if (c == 'E')
 		cout << "Effort";
+        else
+        cout << "Failure";
 }
