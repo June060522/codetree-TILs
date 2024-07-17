@@ -9,13 +9,13 @@ int main()
 	cin >> c;
 	if (c == 'S')
 		cout << "Superior";
-	if (c == 'F')
+	else if (c == 'F')
 		cout << "Fantastic";
-	if (c == 'G')
+	else if (c == 'G')
 		cout << "Good";
-	if (c == 'U')
+	else if (c == 'U')
 		cout << "Usually";
-	if (c == 'E')
+	else if (c == 'E')
 		cout << "Effort";
         else
         cout << "Failure";
