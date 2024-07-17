@@ -4,10 +4,10 @@
 using namespace std;
 
 int main() {
-	int m, o, p;
-	int input;
+	long long m, o, p;
+	long long input;
 	long long answer = 0;
-	vector<int> peoples;
+	vector<long long> peoples;
 	cin >> m;
 
 	for (int i = 0; i < m; i++)
@@ -21,7 +21,7 @@ int main() {
 		answer += 1;
 		peoples[i] -= o;
 		if(peoples[i] > 0)
-			answer += ceil((float)peoples[i] / p);
+			answer += ceil((double)peoples[i] / p);
 	}
 	cout << answer;
 }
