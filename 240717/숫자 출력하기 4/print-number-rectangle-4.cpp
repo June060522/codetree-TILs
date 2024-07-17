@@ -18,13 +18,13 @@ int main()
 			}
 			else if (m == 2)
 			{
-				if (j % 2 == 1)
+				if (i % 2 == 1)
 				{
 					cout << j + 1 << " ";
 				}
 				else
 				{
-					cout << n - j - 1 << " ";
+					cout << n - j << " ";
 				}
 			}
 			else
