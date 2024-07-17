@@ -20,7 +20,8 @@ int main() {
 	{
 		answer += 1;
 		peoples[i] -= o;
-		answer += ceil((float)peoples[i] / p);
+		if(peoples[i] > 0)
+			answer += ceil((float)peoples[i] / p);
 	}
 	cout << answer;
 }
