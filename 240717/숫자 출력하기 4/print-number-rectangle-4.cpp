@@ -18,7 +18,7 @@ int main()
 			}
 			else if (m == 2)
 			{
-				if (i % 2 == 1)
+				if (i % 2 == 0)
 				{
 					cout << j + 1 << " ";
 				}
