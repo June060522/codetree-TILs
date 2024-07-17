@@ -6,9 +6,8 @@ using namespace std;
 int main()
 {
 	int n;
-		string t;
-	cin >> n >> t;
+	cin >> n;
 
 	for (int i = 0; i < n; i++)
-		cout << t << endl;
+		cout << "CodeTree Is Best!" << endl;
 }
