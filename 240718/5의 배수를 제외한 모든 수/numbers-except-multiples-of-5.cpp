@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <algorithm>
 
 using namespace std;
 
@@ -9,8 +10,10 @@ int main()
 	cout.precision(1);
 	int x, y;
 	cin >> x >> y;
+	if (x > y)
+		swap(x, y);
 	int sum = 0, total = 0;
-	for (int i = y; i <= x; i++)
+	for (int i = x; i <= y; i++)
 	{
 		if (i % 5 == 0)
 			continue;
